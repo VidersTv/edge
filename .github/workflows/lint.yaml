@@ -52,6 +52,9 @@ jobs:
       - name: install deps
         run: make deps
 
+      - name: generate data loaders structures
+        run: make data_loaders
+
       - uses: actionsx/prettier@v2
         with:
           args: --check .
