@@ -1,0 +1,26 @@
+level: info
+
+redis:
+  username: default
+  master_name: mymaster
+  addresses:
+    - redis.redis.svc.cluster.local:26379
+  database: 0
+  sentinel: true
+
+mongo:
+  database: viders
+
+auth:
+  jwt_token: bat
+
+edge:
+  bind: 0.0.0.0:3000
+
+monitoring:
+  enabled: true
+  bind: :9100
+
+health:
+  enabled: true
+  bind: :9101

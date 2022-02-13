@@ -1,0 +1,17 @@
+*.png
+*.gif
+*.webp
+*.avif
+bin/
+tmp/
+*.yaml
+!config.example.yaml
+!docker-compose.yaml
+!.github/**/*.yaml
+!design.png
+packrd/
+*-packr.go
+*-gqlgen.go
+*_gen.go
+node_modules/
+*.pb.go
