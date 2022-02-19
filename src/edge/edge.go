@@ -169,21 +169,10 @@ func New(gCtx global.Context) <-chan struct{} {
 			}
 
 			user := users[1]
-			if user.Role < structures.GlobalRoleStaff {
-				found := false
-				for _, v := range user.Memberships {
-					if v.ChannelID == channel.ID {
-						if v.Role >= structures.ChannelRoleViewer {
-							found = true
-						}
-						break
-					}
-				}
-				if !found {
-					ctx.SetBodyString("Forbidden")
-					ctx.SetStatusCode(fasthttp.StatusForbidden)
-					return
-				}
+			if user.Role < structures.GlobalRoleStaff || user.MemberRole(channel.ID) < structures.ChannelRoleViewer {
+				ctx.SetBodyString("Forbidden")
+				ctx.SetStatusCode(fasthttp.StatusForbidden)
+				return
 			}
 		}
 
