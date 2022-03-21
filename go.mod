@@ -5,7 +5,7 @@ go 1.17
 require (
 	github.com/bugsnag/panicwrap v1.3.4
 	github.com/fasthttp/router v1.4.6
-	github.com/go-redis/redis/v8 v8.11.4
+	github.com/go-redis/redis/v8 v8.11.5
 	github.com/json-iterator/go v1.1.12
 	github.com/prometheus/client_golang v1.12.1
 	github.com/sirupsen/logrus v1.8.1
