@@ -13,7 +13,7 @@ require (
 	github.com/spf13/viper v1.10.1
 	github.com/valyala/fasthttp v1.33.0
 	github.com/viderstv/common v0.0.0-20220213002707-d404fe05c78c
-	go.mongodb.org/mongo-driver v1.8.3
+	go.mongodb.org/mongo-driver v1.9.1
 )
 
 require (
